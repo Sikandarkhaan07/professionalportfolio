@@ -1,0 +1,608 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  color: black;
+  background-color: #cadadb;
+  font-family: sans-serif;
+}
+main{
+  overscroll-behavior-x: none;
+  width:100%;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0px 20px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(32, 35, 48);
+}
+header .logo {
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 45px;
+  float: left;
+  font-weight: bold;
+}
+header nav {
+  margin: 0 0 0 725px;
+  width: 100%;
+  position: absolute;
+  padding: 0 0px;
+}
+header nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  z-index: 100;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #fff;
+  background: #2196f3;
+}
+.menu-toggle {
+  height: 45px;
+  color: #fff;
+  float: right;
+  line-height: 40px;
+  font-size: 17px;
+  cursor: pointer;
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  background-color: rgb(32, 35, 48);
+  z-index: -22;
+}
+#home-logo {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateX(15%);
+  animation: filled 0.5s ease forwards 3.5s;
+  background-size: cover;
+}
+#home-logo path:nth-child(2) {
+  stroke-dasharray: 493px;
+  stroke-dashoffset: 493px;
+  animation: line-anim 2s ease forwards;
+}
+#home-logo path:nth-child(3) {
+  stroke-dasharray: 239px;
+  stroke-dashoffset: 239px;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#home-logo path:nth-child(4) {
+  stroke-dasharray: 467px;
+  stroke-dashoffset: 467px;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#home-logo path:nth-child(5) {
+  stroke-dasharray: 506px;
+  stroke-dashoffset: 506px;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#home-logo path:nth-child(6) {
+  stroke-dasharray: 422px;
+  stroke-dashoffset: 422px;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#home-logo path:nth-child(7) {
+  stroke-dasharray: 561px;
+  stroke-dashoffset: 561px;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#home-logo path:nth-child(8) {
+  stroke-dasharray: 506px;
+  stroke-dashoffset: 506px;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#home-logo path:nth-child(9) {
+  stroke-dasharray: 246px;
+  stroke-dashoffset: 246px;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+#home-logo path:nth-child(10) {
+  stroke-dasharray: 512px;
+  stroke-dashoffset: 512px;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+#home-logo path:nth-child(11) {
+  stroke-dasharray: 477px;
+  stroke-dashoffset: 477px;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#home-logo path:nth-child(12) {
+  stroke-dasharray: 506px;
+  stroke-dashoffset: 506px;
+  animation: line-anim 2s ease forwards 2.7s;
+}
+
+#home-logo path:nth-child(13) {
+  stroke-dasharray: 422px;
+  stroke-dashoffset: 422px;
+  animation: line-anim 2s ease forwards 3s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes filled {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+/* eduations sections css code */
+.container-eduation .ed-cards{
+  display: grid;
+  grid-gap: 1rem;
+  padding: 75px 45px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+}
+.container-eduation .ed-cards .card{
+  padding: 1rem;
+  height: 247px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+  border-radius: .3rem;
+  border-left: 2px solid #2196f3;
+}
+.container-eduation .ed-cards .card h2{
+  padding: 5px 0px;
+}
+.container-eduation .ed-cards .card p{
+  padding: 10px 0px 40px 0px;
+}
+.container-eduation .ed-cards .card .content span{
+  display: flex;
+  padding: 2px;
+}
+/* skills sections */
+.container-skills .skills{
+  padding: 30px;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 100%));
+}
+.skills .skill-card{
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  background: #e9ecf2;
+  box-shadow: 5px 3px #d9d9d9;
+  display: flex;
+  padding: 7px;
+}
+.skill-card .img{
+  padding: 6px 15px;
+}
+.skill-card .img img{
+  width: 50px;
+}
+.skill-card .progress{
+  width: 80%;
+  padding: 8px 20px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.skill-card .progress h4{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.progress .percent{
+  background:#b6bab9;
+  width: 100%;
+  height: 30px;
+  border-radius: 7px;
+}
+.progress .percent div{
+  height: 30px;
+  background: #3fc8f2;
+}
+.skill-card .content{
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.skill-card .content span{
+  font-weight: bold;
+  font-size: 20px;
+  color: #3fc8f2;
+  text-align: center;
+}
+
+
+.container-services{
+  min-height: 100vh;
+}
+.services{
+  display: grid;
+  grid-gap: 1rem;
+  padding: 30px 100px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+}
+.services .service-card{
+  height: 350px;
+  background:  #34495E;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 41%;
+}
+.services .service-card .icons i{
+  padding: 25px 25px;
+  font-size: 80px;
+  margin: 0.3rem 5.4rem;
+  background: #F6DDCC;
+  border-radius: 50%;
+}
+.services .service-card .content{
+  padding: 20px;
+}
+.services .service-card .content h4{
+  text-align: center;
+  padding: 10px 0px;
+  color: #F2F3F4 ; 
+  text-transform: capitalize;
+}
+.services .service-card .content p{
+  font-size: 15px;
+  color:#566573;
+}
+/* certificate section */
+.card-certificate{
+  width: 300px;
+  height: 400px;
+  background: #6ec3db;
+  border-radius: 10px;
+  box-shadow: 10px 5px 9px 2px #9faeb3;
+  display: grid;
+  grid-template-rows: repeat(1, 40%);
+}
+.card-certificate:hover{
+  margin-top: -10px;
+  transition: all 0.5s ease;
+}
+.card-certificate .img img{
+  width: 300px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-certificate .content{
+  padding: 10px;
+}
+.card-certificate .content h4{
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+.card-certificate .content p{
+  margin-bottom: 10px;
+}
+.card-certificate .content span{
+  color: grey;
+  display: block;
+}
+.card-certificate .content button{
+  margin: 10px 90px;
+  border-radius: 5px;
+  outline: none; 
+  height: 30px;
+  width: 100px;
+  text-transform: uppercase;
+  background: #2b8fc2;
+  border: none;
+  cursor: pointer;
+}
+.card-certificate .content button:hover{
+  color: white;
+}
+/* about section */
+.about{
+  display:grid;
+  grid-gap: 0.5rem;
+  padding: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 49%));
+}
+.about .img img{
+  width: 400px;
+  height: 350px;
+  border-radius:15px;
+}
+.about .about-content{
+  padding: 15px;
+}
+.about-content h4{
+  margin: 10px 0px;
+  font-size:20px;
+  font-weight: bold;
+}
+.about-content p{
+  margin: 15px 0px;
+}
+.about-content button{
+  padding:10px;
+  cursor: pointer;
+  color: white;
+  background: #2b2821;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.about-content button:hover{
+  animation: color-change;
+  animation-duration: 2s;
+}
+@keyframes color-change{
+  0%{
+    background: orange;
+  }
+  50%{
+    background: yellow;
+  }
+  100%{
+    background: #2b2821;
+  }
+}
+
+/* about sections ends here */
+
+/* contact section starts */
+.about{
+  margin-bottom: 100px;
+}
+.about .contact-info, .about .map{
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 7px 5px 10px white;
+  padding: 15px;
+  background: rgb(63, 61, 75);
+}
+.about .contact-info h3{
+  text-align: center;
+  font-size:29px;
+  margin: 10px 0px;
+}
+.about .contact-info div{
+  padding: 15px;
+}
+.about .contact-info h4{
+  margin: 10px 0px;
+}
+.about .contact-info span{
+  color: grey;
+  margin: 0px 10px;
+}
+.about .map iframe{
+  width: 485px;
+}
+.about .social-icons {
+  display: flexbox;
+  padding: 0px 15px;
+  margin-left: 110px;
+}
+.about .social-icons i{
+  padding: 0px 20px;
+  cursor: pointer;
+
+}
+/* contact section ends */
+
+/* footer */
+.footer-continer{
+  width: 100%;
+  height: 50px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  header nav {
+    margin-top: 20px;
+    margin-left: -20px;
+    display: block;
+    position: absolute;
+    height: 70vh;
+    background: #333;
+    top: 50px;
+    right: -800px;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav.active {
+    display: block;
+    right: 0px;
+    transition: all 0.5s ease;
+  }
+
+  /* modifying animating name */
+  .container {
+    width: 768px;
+    height: 100vh;
+  }
+  .container svg {
+    width: 600px;
+    margin-left: -50px;
+  }
+  .container-eduation .ed-cards{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 504px));
+  }
+  .skill-card .content{
+    padding-right: 15px;
+  }
+  .services{
+    grid-template-columns: repeat(auto-fit, minmax(260px, 395px));
+  }
+  .services .service-card .icons i{
+    margin: 0.7rem 8.2rem;
+    font-size: 65px;
+  }
+  .card-certificate, .card-certificate .img img{
+   width: 392px;
+  }
+  .about{
+    grid-template-columns: repeat(auto-fit, minmax(40%, 100%));
+  }
+}
+
+/* for iphone 7+,8+ */
+@media (max-width: 414px){
+  .container svg {
+    width: 330px;
+    margin-left: -60px;
+  }
+  .services{
+    padding: 0px 10px;
+  }
+  .about .contact-info, .about .map{
+    width: 100%;
+  }
+  .about .map iframe {
+    width: 375px;
+  }
+  .about .social-icons {
+    margin-left: 60px;
+  }
+}
+
+/* for iphone 6,7,8 */
+@media (max-width: 375px){
+  header .logo{
+    line-height: 30px;
+    font-size: 25px;
+  }
+  .container svg {
+    margin-left: -35px;
+    width: 260px;
+  }
+  .container-skills .skills{
+    padding: 30px 10px;
+  }
+  .skill-card .img {
+    padding: 20px 10px 0px 0px;
+  }
+  .skill-card .content{
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .services{
+    padding: 10px 10px;
+  }
+  .services .service-card .icons i{
+    margin: 0.7rem 7.2rem;
+  }
+  .card-certificate, .card-certificate .img img {
+      width: 350px;
+  }
+  .about .img img{
+    width: 365px;
+    height: 300px;
+  }
+  .about{
+    width: 375px;
+  }
+  .about .social-icons{
+    margin-left: 35px;
+  }
+  .about .map iframe {
+    width: 335px;
+  }
+  .card-certificate .content button{
+    margin: 10px 115px;
+  }
+
+  
+}
+  /* for iphone 5 series */
+  @media (max-width: 320px){
+    header .logo{
+      font-size: 20px;
+      line-height: 25px;
+    }
+    .container svg {
+      width: 270px;
+      margin-left: -60px;
+    }
+    .container-eduation .ed-cards{
+      padding: 0px 10px;
+    }
+    .container-skills .skills{
+      padding: 0px 5px;
+    }
+    .skill-card .img{
+      padding: 20px 13px 0px 10px;
+    }
+    .skill-card .img img{
+      width: 25px;
+    }
+    .skill-card .content{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .services{
+      padding: 0px 10px;
+    }
+    .services .service-card .icons i{
+      margin: 0.7rem 5.7rem;
+      font-size: 60px;
+    }
+    .card-certificate, .card-certificate .img img{
+      width: 300px;
+    }
+    .card-certificate:hover {
+      margin-top: 10px;
+    }
+    .about .img img{
+      width: 310px;
+      height: 300px;
+    }
+    .about .contact-info, .about .map{
+      width: 100%;
+    }
+    .about .social-icons{
+      margin-left: 10px;
+    }
+    .about .map iframe {
+      width: 280px;
+    }
+  }

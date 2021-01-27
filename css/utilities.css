@@ -1,0 +1,85 @@
+.default{
+    margin: auto 80px;
+    padding: 5px;
+    min-height: 100vh;
+}
+.def-heading{
+    font-size:35px;
+    color: Black;
+    padding: 40px 500px;
+}
+#scroll.increase{
+    height: 80vh;
+}
+.lottie-svg{
+    position: absolute;
+    width: 240px;
+    position: absolute;
+    pointer-events: none;
+    top: 197rem;
+    height: 350px;
+    pointer-events: none;
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}
+@media (max-width: 320px){
+    .default{
+        margin: 0px;
+        padding: 0px;
+    }
+    .def-heading{
+        padding: 40px 80px;
+    }
+}
+@media (max-width: 768px){
+    .default{
+        margin: 0px;
+        padding: 0px;
+    }
+    .def-heading{
+        text-align: center;
+        padding: 40px 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px){
+    .def-heading{
+        padding: 40px 0px;
+        text-align: center;
+    }
+       /* class for scroll */
+       #scroll.check {
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+      }
+      #scroll.check ul li a,
+      #scroll.check .logo,
+      #scroll.check .menu-toggle {
+        color: black;
+      }
+   
+}
+
